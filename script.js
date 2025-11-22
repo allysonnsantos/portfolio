@@ -1,53 +1,33 @@
-// Theme toggle
+// Dark / Light Mode
 const toggle = document.getElementById("themeToggle");
 
-toggle.addEventListener("click", () => {
+toggle.onclick = () => {
   document.body.classList.toggle("light");
-  toggle.innerText = document.body.classList.contains("light") ? "🌞" : "🌙";
-});
+  toggle.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
+};
 
-// Terminal Hacker Animation
+// Terminal fake
 const terminal = document.getElementById("terminal");
 
-const commands = [
-  "> iniciando sistema...",
+const mensagens = [
+  "> carregando dados...",
+  "> conectando ao GitHub...",
   "> carregando projetos...",
-  "> conectando ao github...",
-  "> bem-vindo ao portfolio de Allyson Santos",
-  "> dev mode ativo ✅"
+  "> modo dev ativado ✅",
+  "> bem-vindo ao portfolio de Allyson Santos"
 ];
 
-let i = 0;
+let index = 0;
 
-function typeTerminal() {
-  if (i < commands.length) {
-    const line = document.createElement("p");
-    line.textContent = commands[i];
-    terminal.appendChild(line);
+function escreverTerminal() {
+  if (index < mensagens.length) {
+    const linha = document.createElement("p");
+    linha.textContent = mensagens[index];
+    terminal.appendChild(linha);
     terminal.scrollTop = terminal.scrollHeight;
-    i++;
-    setTimeout(typeTerminal, 1200);
+    index++;
+    setTimeout(escreverTerminal, 1200);
   }
 }
 
-setTimeout(typeTerminal, 1000);
-
-// Efeito 3D mouse
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("mousemove", (e) => {
-    let x = e.offsetX;
-    let y = e.offsetY;
-
-    let centerX = card.clientWidth / 2;
-    let centerY = card.clientHeight / 2;
-
-    let moveX = (x - centerX) / 20;
-    let moveY = (y - centerY) / 20;
-
-    card.style.transform = `rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "rotateX(0deg) rotateY(0deg)";
-  });
-});
+setTimeout(escreverTerminal, 1500);

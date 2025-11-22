@@ -8,8 +8,7 @@
 body {
   background: radial-gradient(circle, #020617, #000);
   color: white;
-  min-height: 100vh;
-  transition: 0.5s ease;
+  transition: 0.4s;
 }
 
 body.light {
@@ -22,93 +21,97 @@ header {
   padding: 50px 20px;
 }
 
-.avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 20px;
-  border: 2px solid #0ea5e9;
-  box-shadow: 0 0 30px #0ea5e9;
+.foto-container {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
-  object-fit: cover;
-  transition: 0.5s;
 }
 
-.avatar:hover {
-  transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 20px;
+  border: 2px solid #0ea5e9;
+  object-fit: cover;
+  box-shadow: 0 0 40px #0ea5e9aa;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 #themeToggle {
   position: fixed;
   top: 15px;
-  right: 20px;
+  right: 15px;
   padding: 10px 15px;
   background: #0ea5e9;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  padding: 15px;
+  padding: 20px;
 }
 
 .card {
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
   border-radius: 15px;
   padding: 25px;
-  margin-bottom: 40px;
+  margin: 25px 0;
   box-shadow: 0 15px 40px black;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s;
 }
 
 .card:hover {
-  transform: perspective(1000px) rotateX(3deg) rotateY(3deg) scale(1.01);
+  transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
 }
 
 .skills span {
   display: inline-block;
   padding: 8px 15px;
-  background: #0f172a;
-  margin: 8px;
-  border-radius: 10px;
   border: 1px solid #0ea5e9;
+  border-radius: 8px;
+  margin: 6px;
+}
+
+.project {
+  margin-top: 15px;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0ea5e9;
+  text-decoration: none;
 }
 
 .terminal {
   background: black;
+  padding: 15px;
   color: #00ff9d;
   font-family: monospace;
-  padding: 15px;
   border-radius: 10px;
   min-height: 120px;
-  box-shadow: inset 0 0 10px #00ff9d;
-  overflow-y: auto;
 }
 
 .links a {
   display: inline-block;
-  margin: 10px 15px 0 0;
-  padding: 10px 20px;
-  background: linear-gradient(45deg, #0ea5e9, #2563eb);
+  margin: 10px;
+  padding: 10px 18px;
+  background: linear-gradient(45deg,#0ea5e9,#2563eb);
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   text-decoration: none;
 }
 
-.links a:hover {
-  transform: translateY(-3px);
-}
-
-body.light .card {
-  background: white;
-  color: black;
-}
-
-body.light .terminal {
-  background: #0f172a;
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
 }
