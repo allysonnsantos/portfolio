@@ -2,13 +2,20 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Allyson Santos | Back-End Developer</title>
+  <title>Allyson Santos | Back-End Systems</title>
+  <meta name="description" content="Portfólio de Allyson Santos, desenvolvedor back-end com foco em sistemas, linguagem C, estruturas, algoritmos e baixo nível.">
+  <meta name="keywords" content="C, Sistemas, Back-end, Programação, Low Level, Linux, Estruturas de Dados">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="status-bar">
+  STATUS: <span class="online">ONLINE</span> • SISTEMA: OK • COMPILADOR: GCC • MODO: BACK-END
+  <button id="langToggle">🌎 EN</button>
+</div>
 
 <button id="themeToggle">🌙</button>
 
@@ -18,52 +25,20 @@
   </div>
 
   <h1>Allyson Santos</h1>
-  <h2>Desenvolvedor Back-end • C | Sistemas • Estudante de SI</h2>
-  <p class="subtitle">
-    Foco em baixo nível, fundamentos e lógica computacional.
-  </p>
+  <h2>Desenvolvedor Back-End • Sistemas • C • Baixo Nível</h2>
 </header>
 
 <main class="container">
 
-  <!-- SOBRE -->
-  <section class="card">
+  <section class="card" id="about">
     <h3>Sobre mim</h3>
     <p>
-      Sou técnico em informática e estudante de Sistemas de Informação, com foco em desenvolvimento
-      de sistemas, programação em C e fundamentos de computação.
-      Tenho interesse em backend, estruturas de dados, sistemas operacionais e funcionamento de software em baixo nível.
+      Sou técnico em informática e estudante de Sistemas de Informação, com foco em desenvolvimento de sistemas e programação em baixo nível.
+      Trabalho principalmente com C, estruturas de dados, lógica e organização de memória.
+      Busco minha primeira oportunidade na área de desenvolvimento de software e sistemas.
     </p>
   </section>
 
-  <!-- STACK BACK-END -->
-  <section class="card">
-    <h3>Stack Back-End</h3>
-    <div class="skills">
-      <span>C</span>
-      <span>Estruturas de Dados</span>
-      <span>Algoritmos</span>
-      <span>Sistemas Operacionais</span>
-      <span>Lógica de Programação</span>
-      <span>Git</span>
-      <span>Shell (Básico)</span>
-    </div>
-  </section>
-
-  <!-- HABILIDADES GERAIS -->
-  <section class="card">
-    <h3>Habilidades Técnicas</h3>
-    <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Git & GitHub</span>
-      <span>Depuração</span>
-      <span>Terminal Linux</span>
-    </div>
-  </section>
-
-  <!-- FORMAÇÃO -->
   <section class="card">
     <h3>Formação</h3>
     <ul>
@@ -72,17 +47,81 @@
     </ul>
   </section>
 
-  <!-- EXPERIÊNCIA -->
   <section class="card">
-    <h3>Experiência</h3>
-    <p>
-      Desenvolvimento de programas em C, projetos acadêmicos em sistemas,
-      lógica e estruturas de dados, além de manutenção e configuração de computadores.
-    </p>
+    <h3>Stack Back-End</h3>
+    <div class="stack">
+      <h4>🧠 Linguagens</h4>
+      <p>C, JavaScript</p>
+
+      <h4>⚙️ Ferramentas</h4>
+      <p>GCC, Git, GitHub, VS Code, Windows</p>
+
+      <h4>📚 Conceitos</h4>
+      <p>Estruturas de Dados, Ponteiros, Algoritmos, Lógica, Memória</p>
+
+      <h4>🚧 Estudando</h4>
+      <p>Processos, Threads, Sistemas Operacionais</p>
+    </div>
   </section>
 
-  <!-- PROJETOS -->
+  <section class="card">
+    <h3>Como eu trabalho</h3>
+    <ul>
+      <li>✔️ Código focado em clareza e lógica</li>
+      <li>✔️ Uso Git em todos os projetos</li>
+      <li>✔️ Implemento e testo tudo manualmente</li>
+      <li>✔️ Busco entender como o código funciona internamente</li>
+    </ul>
+  </section>
+
   <section class="card">
     <h3>Projetos</h3>
 
     <div class="project">
+      <h4>📌 Validador de Datas em C</h4>
+      <p>Linguagem: C • Conceitos: validação, lógica, estruturas</p>
+      <p>Compilação: gcc data.c -o data</p>
+      <a href="#">Ver no GitHub</a>
+    </div>
+
+    <div class="project">
+      <h4>📌 Torre de Hanoi em C</h4>
+      <p>Implementação recursiva clássica do algoritmo.</p>
+      <p>Complexidade: O(2ⁿ)</p>
+      <a href="#">Ver no GitHub</a>
+    </div>
+
+  </section>
+
+  <section class="card">
+    <h3>Objetivo Profissional</h3>
+    <p>
+      Busco oportunidade como desenvolvedor back-end ou na área de sistemas, visando crescimento técnico e atuação em projetos reais.
+    </p>
+  </section>
+
+  <section class="card">
+    <h3>Terminal do Sistema</h3>
+    <div class="terminal" id="terminal">
+      <p>> inicializando sistema...</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Contato</h3>
+    <div class="links">
+      <a href="https://github.com/allysonnsantos" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/allyson-silva-4935aa299" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/allysonnsantos_/" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 • Allyson Santos • Sistemas & Back-End
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-// Toggle Dark / Light
+// Dark/Light mode
 const toggle = document.getElementById("themeToggle");
 
 toggle.onclick = () => {
@@ -6,30 +6,49 @@ toggle.onclick = () => {
   toggle.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
 };
 
-// Terminal estilo servidor
+// Terminal Backend Fake
 const terminal = document.getElementById("terminal");
 
-const mensagens = [
+const logs = [
   "> iniciando sistema...",
   "> carregando módulos...",
-  "> conectando ao servidor...",
-  "> conexão com banco: OK ✔️",
-  "> carregando projetos...",
-  "> backend online na porta 8080 ✅",
-  "> portfolio carregado com sucesso 🚀"
+  "> verificando compilador: GCC OK",
+  "> conectando a recursos locais...",
+  "> inicialização concluída ✅",
+  "> sistema pronto para instruções"
 ];
 
-let index = 0;
+let i = 0;
 
-function escreverTerminal() {
-  if (index < mensagens.length) {
-    const linha = document.createElement("p");
-    linha.textContent = mensagens[index];
-    terminal.appendChild(linha);
+function startTerminal() {
+  if (i < logs.length) {
+    const line = document.createElement("p");
+    line.textContent = logs[i];
+    terminal.appendChild(line);
     terminal.scrollTop = terminal.scrollHeight;
-    index++;
-    setTimeout(escreverTerminal, 1000);
+    i++;
+    setTimeout(startTerminal, 1200);
   }
 }
 
-setTimeout(escreverTerminal, 800);
+setTimeout(startTerminal, 1500);
+
+// Sistema de idiomas básico
+const langToggle = document.getElementById("langToggle");
+let lang = "pt";
+
+langToggle.onclick = () => {
+  lang = lang === "pt" ? "en" : "pt";
+
+  if (lang === "en") {
+    document.querySelector("h2").innerText = "Back-End Developer • Systems • C • Low Level";
+    document.getElementById("about").querySelector("p").innerText =
+      "I am a computer technician and Information Systems student focused on low-level programming and system development using C.";
+    langToggle.innerText = "🌎 PT";
+  } else {
+    document.querySelector("h2").innerText = "Desenvolvedor Back-End • Sistemas • C • Baixo Nível";
+    document.getElementById("about").querySelector("p").innerText =
+      "Sou técnico em informática e estudante de Sistemas de Informação, com foco em desenvolvimento de sistemas e programação em baixo nível.";
+    langToggle.innerText = "🌎 EN";
+  }
+};
