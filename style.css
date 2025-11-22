@@ -21,6 +21,11 @@ header {
   padding: 50px 20px;
 }
 
+.subtitle {
+  margin-top: 10px;
+  color: #94a3b8;
+}
+
 .foto-container {
   display: flex;
   justify-content: center;
@@ -51,6 +56,7 @@ header {
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  color: white;
 }
 
 .container {
@@ -65,11 +71,12 @@ header {
   padding: 25px;
   margin: 25px 0;
   box-shadow: 0 15px 40px black;
-  transition: transform 0.4s;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .card:hover {
-  transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
 .skills span {
@@ -78,6 +85,7 @@ header {
   border: 1px solid #0ea5e9;
   border-radius: 8px;
   margin: 6px;
+  font-size: 14px;
 }
 
 .project {
@@ -91,13 +99,19 @@ header {
   text-decoration: none;
 }
 
+.project a:hover {
+  text-decoration: underline;
+}
+
 .terminal {
-  background: black;
+  background: #020617;
   padding: 15px;
   color: #00ff9d;
   font-family: monospace;
   border-radius: 10px;
-  min-height: 120px;
+  min-height: 150px;
+  border: 1px solid #0ea5e9;
+  overflow-y: auto;
 }
 
 .links a {
@@ -108,6 +122,7 @@ header {
   color: white;
   border-radius: 8px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 footer {

@@ -1,4 +1,4 @@
-// Dark / Light Mode
+// Toggle Dark / Light
 const toggle = document.getElementById("themeToggle");
 
 toggle.onclick = () => {
@@ -6,15 +6,17 @@ toggle.onclick = () => {
   toggle.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
 };
 
-// Terminal fake
+// Terminal estilo servidor
 const terminal = document.getElementById("terminal");
 
 const mensagens = [
-  "> carregando dados...",
-  "> conectando ao GitHub...",
+  "> iniciando sistema...",
+  "> carregando módulos...",
+  "> conectando ao servidor...",
+  "> conexão com banco: OK ✔️",
   "> carregando projetos...",
-  "> modo dev ativado ✅",
-  "> bem-vindo ao portfolio de Allyson Santos"
+  "> backend online na porta 8080 ✅",
+  "> portfolio carregado com sucesso 🚀"
 ];
 
 let index = 0;
@@ -26,8 +28,8 @@ function escreverTerminal() {
     terminal.appendChild(linha);
     terminal.scrollTop = terminal.scrollHeight;
     index++;
-    setTimeout(escreverTerminal, 1200);
+    setTimeout(escreverTerminal, 1000);
   }
 }
 
-setTimeout(escreverTerminal, 1500);
+setTimeout(escreverTerminal, 800);
